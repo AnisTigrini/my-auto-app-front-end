@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Larsseit,Arial,sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(247, 247, 249);
+}
+
+@media only screen and (max-width: 750px) {
+    .connexion {
+        grid-template-columns: 1fr !important;
+    }
+
+    .inscription {
+        grid-template-columns: 1fr !important;
+    }
+
+    .conn-main {
+        padding: 3rem !important;
+    }
+
+    .inscr-main {
+        padding: 3rem !important;
+    }
+}

@@ -1,0 +1,138 @@
+.inscription {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 94%;
+}
+
+.inscr-main {
+    background-color: #f7f7f9;
+    padding: 5rem 2rem 5rem 15rem;
+
+}
+
+.insc-main-format {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: .75rem;
+}
+
+p {
+    color: #666974;
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin-bottom: 2.5rem;
+}
+
+label {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+input {
+    height: 4.5rem;
+    border-radius: 1rem;
+    outline: none;
+    min-width: 300px;
+    max-width: 450px;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    transition: all .3s;
+}
+
+input:focus {
+    box-shadow: 0 0 0 4px #1477d4;
+    border: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+span {
+    margin-top: 2rem;
+}
+
+button {
+    width: 300px;
+    font-size: 14px;
+    margin-top: 1rem;
+    justify-self: center;
+    padding: 2rem;
+    color: white;
+    font-weight: 700;
+    background-color: #1477d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d5c97;
+}
+
+h2 {
+    font-size: large;
+    margin-top: 1rem;
+    font-weight: 100;
+    color: #666974;
+}
+
+a {
+    font-size: 19px;
+    font-weight: 300;
+    color: #1477d4;
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inscr-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10rem 4rem 10rem 4rem;
+    height: fit-content;
+}
+
+img {
+    max-width: 225px;
+}
+
+#text-un {
+    color: #2d2f3b;
+    font-weight: 600;
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+} 
+
+i {
+    margin-right: 1rem;
+}
+
+span {
+    font-size: 18px;
+    align-self: center;
+    justify-self: center;
+}
+
+.inscr-info-detail {
+    height: 5rem;
+}
+
+button:disabled {
+    background-color: #666974;
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+.error {
+    color: white;
+    padding: 1rem;
+    background-color: rgb(255, 82, 82);
+    border: rgb(255, 58, 58);
+    border-radius: 5px;
+    justify-content: center;
+    min-width: 85%;
+    justify-self: center;
+}

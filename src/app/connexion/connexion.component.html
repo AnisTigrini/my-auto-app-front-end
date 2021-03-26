@@ -1,0 +1,39 @@
+<div class="connexion">
+    <form class="conn-main" [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
+        <div class='conn-main-format'>
+            <h1>Se connecter</h1>
+            <p>Utilisez vos identifiants Jikiki pour vous connecter.</p>
+
+            <div *ngIf="reponseConnexion" class="error">
+                <h3>{{ reponseConnexion }}</h3>
+            </div>
+
+            <label>Adresse Courriel</label>
+            <input name="adresseCourriel" type="text" formControlName="adresseCourriel">
+
+            <label>Mot de passe</label>
+            <input name="motDePasse" type="password" formControlName="motDePasse">
+
+            <button type="submit" [disabled]="!connexionForm.valid">Connexion</button>
+
+            <h2>Vous n’avez pas de compte Jikiki?</h2>
+            <a routerLink='/inscription'>Inscrivez-vous</a>
+        </div>
+    </form>
+    <div class="conn-info">
+        <img src='../../assets/auto-logo.png'>
+        <h2 id='text-un'>Accéder à toute l'expérience Jikiki</h2>
+        <div class="conn-info-detail">
+            <i class="far fa-heart fa-2x"></i>
+            <span>Accéder à vos véhicules favoris</span>
+        </div>
+        <div class="conn-info-detail">
+            <i class="far fa-envelope fa-2x"></i>
+            <span>Envoyer et recevoir facilement vos messages</span>
+        </div>
+        <div class="conn-info-detail">
+            <i class="far fa-bookmark fa-2x"></i>
+            <span>Sauvegarder les recherches pour faire le suivi des véhicules</span>
+        </div>
+    </div>
+</div>

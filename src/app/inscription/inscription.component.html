@@ -1,0 +1,50 @@
+<div class="inscription">
+    <form class="inscr-main" [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
+        <div class='insc-main-format'>
+            <h1>S'inscrire</h1>
+            <p>Créez un compte Jikiki et vous pourrez accéder à nos services.</p>
+
+            <div *ngIf="reponseInscription" class="error">
+                <h3>{{ reponseInscription }}</h3>
+            </div>
+
+            <label>Adresse Courriel</label>
+            <input type="text" formControlName="adresseCourriel" name="adresseCourriel">
+
+            <label>Prenom</label>
+            <input type="text" formControlName="prenomUtilisateur" name="prenomUtilisateur">
+            
+            <label>Nom</label>
+            <input type="text" formControlName="nomUtilisateur" name="nomUtilisateur">
+
+            <label>Annee de naissance</label>
+            <input type="date" formControlName="anneNaissance" name="anneNaissance">
+
+            <label>Mot de passe</label>
+            <input type="password" formControlName="motDePasse" name="motDePasse">
+
+            <span>En cliquant sur « S'inscrire », vous acceptez nos conditions d’utilisation et notre politique de confidentialité</span>
+            <button type="submit" [disabled]="!inscriptionForm.valid">S'inscrire</button>
+
+            <h2>Vous détenez déjà un compte Jikiki?</h2>
+            <a routerLink='/connexion'>Connectez-vous</a>
+
+        </div>
+    </form>
+    <div class="inscr-info">
+        <img src='../../assets/auto-logo.png'>
+        <h2 id='text-un'>Accéder à toute l'expérience Jikiki</h2>
+        <div class="inscr-info-detail">
+            <i class="far fa-heart fa-2x"></i>
+            <span>Accéder à vos véhicules favoris</span>
+        </div>
+        <div class="inscr-info-detail">
+            <i class="far fa-envelope fa-2x"></i>
+            <span>Envoyer et recevoir facilement vos messages</span>
+        </div>
+        <div class="inscr-info-detail">
+            <i class="far fa-bookmark fa-2x"></i>
+            <span>Sauvegarder les recherches pour faire le suivi des véhicules</span>
+        </div>
+    </div>
+</div>

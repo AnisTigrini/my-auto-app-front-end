@@ -1,0 +1,107 @@
+<app-header></app-header>
+<div class='pageprincipale'>
+    <h1>Trouvez votre voiture</h1>
+    <div class='search-bar'>
+        <div>
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <span class='search-text'>Tout au Canada</span>
+        </div>
+        <input type="text">
+        <div class='prix-km'>
+            <div>
+                <i class="fas fa-search-dollar fa-2x"></i>
+                <input type="number" placeholder="Prix Max">
+            </div>
+            <div>
+                <i class="fas fa-tachometer-alt fa-2x"></i>
+                <input type="number" placeholder="Km Max">
+            </div>
+        </div>
+        <button type="button">Rechercher</button>
+    </div>
+
+    <h1>Marques Populaires</h1>
+    <div class="marques-et-autos">
+        <div class='marques'>
+            <img src='../../assets/Ford.jpg'>
+            <h1>Ford</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Toyota.jpg'>
+            <h1>Toyota</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Honda.jpg'>
+            <h1>Honda</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Chevrolet.jpg'>
+            <h1>Chevrolet</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Nissan.jpg'>
+            <h1>Nissan</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/BMW.jpg'>
+            <h1>BMW</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Dodge.jpg'>
+            <h1>Dodge</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/GMC.jpg'>
+            <h1>GMC</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Volkswagen.jpg'>
+            <h1>Volkswagen</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Jeep.jpg'>
+            <h1>Jeep</h1>
+        </div>
+    </div>
+
+    <h1>Type de carroserie</h1>
+    <div class="marques-et-autos">
+        <div class='marques'>
+            <img src='../../assets/Camionnette.jpg'>
+            <h1>Camionnette</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/VUS.jpg'>
+            <h1>VUS</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Berline.jpg'>
+            <h1>Berline</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Fourgonnettes.jpg'>
+            <h1>Fourgonnettes</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Coupe.jpg'>
+            <h1>Coupé</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Cabriolet.jpg'>
+            <h1>Cabriolet</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Hayon.jpg'>
+            <h1>À Hayon</h1>
+        </div>
+        <div class='marques'>
+            <img src='../../assets/Familliale.jpg'>
+            <h1>Familliale</h1>
+        </div>
+    </div>
+    
+    <h1>Toutes les marques</h1>
+    <div class='marques-auto'>
+        <span class="autoBrand" *ngFor='let auto of autoBrandList'>{{ auto }}</span>
+    </div>
+</div>

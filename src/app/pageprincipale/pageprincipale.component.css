@@ -1,0 +1,105 @@
+.pageprincipale {
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+.marques-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 2rem;
+    row-gap: .5rem;
+    justify-items: center;
+}
+
+.autoBrand {
+    cursor: pointer;
+    color: #666974;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+i {
+    color:#1477d4;
+}
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    border: .0625rem solid #dedee1;
+    background-color: white;
+    justify-self: center;
+    min-width: 70%;
+    row-gap: .5rem;
+    border-radius: 5px;
+}
+
+.search-text {
+    font-size: 16px;
+    margin-left: 1rem;
+}
+
+button {
+    width: 85%;
+    font-size: 14px;
+    margin-top: 1rem;
+    justify-self: center;
+    padding: 1rem;
+    color: white;
+    font-weight: 700;
+    background-color: #1477d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d5c97;
+}
+
+input {
+    height: 3.5rem;
+    border-radius: 8px;
+    outline: none;
+    border: .0625rem solid #2c2c2c;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.prix-km {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: .5rem;
+}
+
+.fa-search-dollar, .fa-tachometer-alt{
+    position: relative;
+    left: 5px;
+    top: 27px;
+}
+
+.marques-et-autos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    padding: 1.5rem;
+    column-gap: .5rem;
+    row-gap: .5rem;
+}
+
+img {
+    width: 140px;
+    height: 140px;
+}
+
+.marques {
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 2px 4px rgb(45 47 59 / 12%);
+}

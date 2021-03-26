@@ -1,0 +1,22 @@
+header {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    padding: .5rem;
+}
+
+.logo {
+    max-width: 125px;
+}
+
+.icon {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    cursor: pointer;
+    width: fit-content;
+    transition: all .3s;
+}
+
+.icon:hover {
+    color: #1477d4;
+}

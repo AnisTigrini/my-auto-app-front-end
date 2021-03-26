@@ -1,0 +1,29 @@
+img {
+    max-width: 250px;
+}
+
+.pagenotfound {
+    display: grid;
+    grid-row: 1fr;
+    padding: 10rem;
+    justify-items: center;
+    row-gap: 1rem;
+}
+
+button {
+    width: 215px;
+    font-size: 14px;
+    margin-top: 1rem;
+    justify-self: center;
+    padding: 1.3rem;
+    color: white;
+    font-weight: 700;
+    background-color: #1477d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d5c97;
+}

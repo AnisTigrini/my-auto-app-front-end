@@ -1,0 +1,10 @@
+.info {
+    background-color: #def2f8;
+    text-align: center;
+}
+
+.info-text {
+    padding: 1rem;
+    font-size: 15px;
+    font-weight: 700;
+}
