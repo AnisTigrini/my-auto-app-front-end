@@ -4,7 +4,13 @@
             <h1>S'inscrire</h1>
             <p>Créez un compte Jikiki et vous pourrez accéder à nos services.</p>
 
-            <div *ngIf="reponseInscription" class="error">
+            <div *ngIf='spinner' class='spinner'>
+                <app-spinner></app-spinner>
+            </div>
+
+            <div *ngIf="reponseInscription.length > 0" 
+                [ngClass]="reponseInscription === 'Félicitations, vous vous êtes inscris!' ? 
+                'success' : 'error'">
                 <h3>{{ reponseInscription }}</h3>
             </div>
 

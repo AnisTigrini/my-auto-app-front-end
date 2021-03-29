@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { authService } from "../authService"
 
@@ -11,14 +12,22 @@ import { authService } from "../authService"
 })
 export class ConnexionComponent implements OnInit, OnDestroy {
 
-  reponseConnexion;
+  reponseConnexion = "";
   mySubscription:Subscription;
+  myOtherSubscription:Subscription;
+  spinner:boolean = false;
 
-  constructor(private authService:authService) { }
+  constructor(private authService:authService, private router:Router) { }
 
   ngOnInit(): void {
     this.mySubscription = this.authService.authSubject.subscribe((data) => {
       this.reponseConnexion = data;
+      if (this.reponseConnexion == 'connecté') {
+        this.router.navigate(['/'])
+      }
+    })
+    this.myOtherSubscription = this.authService.spinnerUpdate.subscribe((data) => {
+      this.spinner = data
     })
   }
 
@@ -28,11 +37,13 @@ export class ConnexionComponent implements OnInit, OnDestroy {
   });
 
   onSubmit() {
+    this.spinner = true;
+    this.reponseConnexion = ""
     this.authService.postConnexionCredentials(this.connexionForm.value)
-    console.log(this.reponseConnexion)
   }
 
   ngOnDestroy() {
     this.mySubscription.unsubscribe()
+    this.myOtherSubscription.unsubscribe()
   }
 }

@@ -3,8 +3,14 @@
         <div class='conn-main-format'>
             <h1>Se connecter</h1>
             <p>Utilisez vos identifiants Jikiki pour vous connecter.</p>
+            
+            <div *ngIf='spinner' class='spinner'>
+                <app-spinner></app-spinner>
+            </div>
 
-            <div *ngIf="reponseConnexion" class="error">
+            <div *ngIf="reponseConnexion.length > 0" 
+                [ngClass]="reponseConnexion === 'Les identifiants entrees sont invalides' ? 
+                'error' : 'success'">
                 <h3>{{ reponseConnexion }}</h3>
             </div>
 

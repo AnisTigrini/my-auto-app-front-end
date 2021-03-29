@@ -129,10 +129,26 @@ input.ng-invalid.ng-touched {
 .error {
     color: white;
     padding: 1rem;
-    background-color: rgb(255, 82, 82);
-    border: rgb(255, 58, 58);
+    background-color: rgb(255, 129, 129);
+    border: 1px solid rgb(175, 11, 11);
     border-radius: 5px;
     justify-content: center;
     min-width: 85%;
     justify-self: center;
+}
+
+.success {
+    color: white;
+    padding: 1rem;
+    background-color: rgb(16, 238, 46);
+    border: 1px solid rgb(9, 172, 17);
+    border-radius: 5px;
+    justify-content: center;
+    min-width: 85%;
+    justify-self: center;
+}
+
+.spinner {
+    height: 6rem;
+    justify-content: center;
 }

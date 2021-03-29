@@ -10,6 +10,8 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { PageprincipaleComponent } from './pageprincipale/pageprincipale.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HeaderComponent } from './header/header.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { ConnexionGuard } from './connexion.guard';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { HeaderComponent } from './header/header.component';
     ConnexionComponent,
     PageprincipaleComponent,
     PagenotfoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { HeaderComponent } from './header/header.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ConnexionGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

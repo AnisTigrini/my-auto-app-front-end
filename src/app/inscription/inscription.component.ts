@@ -10,14 +10,19 @@ import { authService } from "../authService"
 })
 export class InscriptionComponent implements OnInit, OnDestroy {
 
-  reponseInscription;
-  mySubscription:Subscription
+  reponseInscription = "";
+  mySubscription:Subscription;
+  myOtherSubscription:Subscription;
+  spinner:boolean = false;
 
   constructor(private authService:authService) { }
 
   ngOnInit(): void {
     this.mySubscription = this.authService.authSubject.subscribe((data) => {
       this.reponseInscription = data;
+    })
+    this.myOtherSubscription = this.authService.spinnerUpdate.subscribe((data) => {
+      this.spinner = data
     })
   }
 
@@ -31,10 +36,13 @@ export class InscriptionComponent implements OnInit, OnDestroy {
 
   
   onSubmit() {
+    this.spinner = true;
+    this.reponseInscription = ""
     this.authService.postSubsciptionCredentials(this.inscriptionForm.value)
   }
 
   ngOnDestroy() {
-
+    this.mySubscription.unsubscribe()
+    this.myOtherSubscription.unsubscribe()
   }
 }
