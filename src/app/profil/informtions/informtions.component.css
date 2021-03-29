@@ -1,0 +1,107 @@
+.informations {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 94%;
+}
+
+.info-main {
+    background-color: #f7f7f9;
+    padding: 5rem 2rem 5rem 15rem;
+    border: 1px solid #1477d4;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.info-main-format {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: .75rem;
+    justify-items: center;
+}
+
+p {
+    color: #666974;
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin-bottom: 2.5rem;
+}
+
+label {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+input {
+    height: 4.5rem;
+    border-radius: 1rem;
+    outline: none;
+    min-width: 300px;
+    max-width: 450px;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    transition: all .3s;
+}
+
+input:focus {
+    box-shadow: 0 0 0 4px #1477d4;
+    border: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+button {
+    width: 300px;
+    font-size: 14px;
+    margin-top: 1rem;
+    justify-self: center;
+    padding: 2rem;
+    color: white;
+    font-weight: 700;
+    background-color: #1477d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d5c97;
+}
+
+button:disabled {
+    background-color: #666974;
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+.image-profil {
+    border: 2px solid #1477d4;
+    border-radius: 100px;
+    max-height: 85px;
+    max-width: 85px;
+}
+
+.error {
+    color: white;
+    padding: 1rem;
+    background-color: rgb(255, 129, 129);
+    border: 1px solid rgb(175, 11, 11);
+    border-radius: 5px;
+    justify-content: center;
+    min-width: 85%;
+    justify-self: center;
+}
+
+.success {
+    color: white;
+    padding: 1rem;
+    background-color: rgb(16, 238, 46);
+    border: 1px solid rgb(9, 172, 17);
+    border-radius: 5px;
+    justify-content: center;
+    min-width: 85%;
+    justify-self: center;
+}

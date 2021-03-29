@@ -12,6 +12,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HeaderComponent } from './header/header.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { ConnexionGuard } from './connexion.guard';
+import { ProfilComponent } from './profil/profil.component';
+import { InformtionsComponent } from './profil/informtions/informtions.component';
+import { FavorisComponent } from './profil/favoris/favoris.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { ConnexionGuard } from './connexion.guard';
     PageprincipaleComponent,
     PagenotfoundComponent,
     HeaderComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ProfilComponent,
+    InformtionsComponent,
+    FavorisComponent
   ],
   imports: [
     BrowserModule,

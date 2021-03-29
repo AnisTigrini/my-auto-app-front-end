@@ -2,6 +2,7 @@ header {
     display: grid;
     grid-template-columns: 5fr 1fr 1fr;
     padding: .5rem;
+    align-items: center;
 }
 
 .logo {
@@ -28,8 +29,8 @@ img {
 }
 
 .imageProfil {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 25px;
+    max-height: 25px;
     border-radius: 100px;
     border: 2px solid #1477d4;
 }

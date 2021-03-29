@@ -7,7 +7,7 @@ import { authService } from '../authService';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnInit {
 
   connection:boolean = false;
   prenom;
@@ -17,10 +17,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.connection = this.authService.connecte()
-    this.imageProfil = this.authService.imageProfil
+    this.imageProfil = localStorage.getItem('imageProfil')
     this.prenom = localStorage.getItem('prenom')
-  }
-
-  ngOnDestroy() {
   }
 }

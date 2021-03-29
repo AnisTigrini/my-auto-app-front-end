@@ -31,4 +31,8 @@ body {
     .inscr-main {
         padding: 3rem !important;
     }
+    
+    .info-main {
+        padding: 1rem !important;
+    }
 }

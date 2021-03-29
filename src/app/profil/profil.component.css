@@ -1,0 +1,41 @@
+.profil {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1px;
+}
+
+.menu-item {
+    font-size: 14px;
+    border: 1px solid #1477d4;
+    color: #1477d4;
+    width: 100%;
+    text-align: center;
+    padding: .3rem;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all .5s;
+}
+
+.menu-plus:hover {
+    color: white;
+    background-color: #1477d4;
+}
+
+.selected {
+    color: white;
+    background-color: #1477d4;
+}
+
+.deconnexion {
+    background-color: rgb(211, 79, 79);
+    border: 1px solid rgb(175, 11, 11);
+    color: white;
+}

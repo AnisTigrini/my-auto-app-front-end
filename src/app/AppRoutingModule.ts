@@ -5,10 +5,12 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PageprincipaleComponent } from './pageprincipale/pageprincipale.component';
+import { ProfilComponent } from './profil/profil.component';
 
 const routes: Routes = [
-    {path:'inscription', component:InscriptionComponent, canActivate:[ConnexionGuard]},
-    {path:'connexion', component:ConnexionComponent, canActivate:[ConnexionGuard]},
+    {path:'inscription', component:InscriptionComponent},
+    {path:'connexion', component:ConnexionComponent},
+    {path:'profil', component:ProfilComponent, canActivate:[ConnexionGuard]},
     {path:'', component:PageprincipaleComponent},
     {path:'**', component:PagenotfoundComponent},
 ];

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
     providedIn:'root'
@@ -9,9 +10,8 @@ import { Subject } from 'rxjs';
 export class authService {
     authSubject = new Subject<string>();
     spinnerUpdate = new Subject<boolean>();
-    imageProfil='../assets/cool-image.jpg'
   
-    constructor(private http: HttpClient) { 
+    constructor(private http: HttpClient, private router:Router) { 
     }
 
     postConnexionCredentials(credentials) {
@@ -24,7 +24,7 @@ export class authService {
                 localStorage.setItem('token', response['token'])
                 localStorage.setItem('prenom', response['prenom'])
                 localStorage.setItem('nom', response['nom'])
-                localStorage.setItem('addresseCourriel', response['addresseCourriel'])
+                localStorage.setItem('imageProfil', response['imageProfil'])
                 this.authSubject.next("connecté")
             }
             
@@ -49,7 +49,32 @@ export class authService {
         })
     }
 
+    maj_profil(credentials) {
+        this.http.post("http://localhost:5000/api/maj-profil", credentials, {'headers': new HttpHeaders().set('content-type', 'application/json')})
+        .subscribe((response) => {
+            this.spinnerUpdate.next(false)
+            if (response['reponse'] == 'echec') {
+                this.authSubject.next("Désolé, l'opération a échoué")
+            } else {
+                this.authSubject.next("Félicitations!")
+                localStorage.setItem('prenom', response['prenom'])
+                localStorage.setItem('nom', response['nom'])
+                localStorage.setItem('imageProfil', response['imageProfil'])
+            }
+            
+        }, (error) => {
+            this.authSubject.next("Désolé, l'opération a échoué")
+        })
+    }
+
     connecte() {
         return !!localStorage.getItem('token')
+    }
+
+
+
+    deconnexion() {
+        localStorage.clear()
+        this.router.navigate(['/'])
     }
 }

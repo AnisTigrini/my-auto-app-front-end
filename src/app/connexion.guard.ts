@@ -12,9 +12,10 @@ export class ConnexionGuard implements CanActivate {
 
   canActivate():boolean {
     const connecte = this.authService.connecte()
-    if (connecte){
+
+    if (!connecte){
       this.router.navigate(['/']);
     }
-    return !connecte;
+    return connecte;
   } 
 }

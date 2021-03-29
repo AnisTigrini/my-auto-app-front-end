@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { authService } from "../authService"
 
@@ -15,7 +16,9 @@ export class InscriptionComponent implements OnInit, OnDestroy {
   myOtherSubscription:Subscription;
   spinner:boolean = false;
 
-  constructor(private authService:authService) { }
+  constructor(private authService:authService, private router:Router) { 
+
+  }
 
   ngOnInit(): void {
     this.mySubscription = this.authService.authSubject.subscribe((data) => {
@@ -24,6 +27,11 @@ export class InscriptionComponent implements OnInit, OnDestroy {
     this.myOtherSubscription = this.authService.spinnerUpdate.subscribe((data) => {
       this.spinner = data
     })
+
+    const connecte = this.authService.connecte()
+    if (connecte){
+      this.router.navigate(['/']);
+    }
   }
 
   inscriptionForm = new FormGroup({

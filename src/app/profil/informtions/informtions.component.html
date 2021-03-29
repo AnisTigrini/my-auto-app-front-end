@@ -1,0 +1,31 @@
+<div class="informations">
+    <form class="info-main" [formGroup]="infoForm" (ngSubmit)="onSubmit()">
+        <div class='info-main-format'>
+            <h1>Informations</h1>
+            <p>Mettre à jour vos informations!</p>
+            
+            <div *ngIf='spinner' class='spinner'>
+                <app-spinner></app-spinner>
+            </div>
+            
+            <div *ngIf='reponseMessage.length > 0' 
+                [class]="reponseMessage == 'Félicitations!' ? 'success' : 'error'">
+                <h3>{{ reponseMessage }}</h3>
+            </div>
+
+            <label>Nom</label>
+            <input name="nom" [placeholder]="nom" type="text" formControlName="nom">
+
+            <label>Prenom</label>
+            <input name="prenom" [placeholder]="prenom" type="text" formControlName="prenom">
+
+            <label>Image de profil</label>
+            <input name="imageProfil" type="url" [(ngModel)]="imageProfil"
+            [placeholder]="imageProfil" formControlName="imageProfil">
+
+            <button type="submit" [disabled]="!infoForm.valid">Mis-à-jour</button>
+
+            <img class="image-profil" [src]="imageProfil"/>
+        </div>
+    </form>
+</div>

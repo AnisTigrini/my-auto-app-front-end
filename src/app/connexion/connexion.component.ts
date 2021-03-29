@@ -17,7 +17,8 @@ export class ConnexionComponent implements OnInit, OnDestroy {
   myOtherSubscription:Subscription;
   spinner:boolean = false;
 
-  constructor(private authService:authService, private router:Router) { }
+  constructor(private authService:authService, private router:Router) {
+  }
 
   ngOnInit(): void {
     this.mySubscription = this.authService.authSubject.subscribe((data) => {
@@ -29,11 +30,15 @@ export class ConnexionComponent implements OnInit, OnDestroy {
     this.myOtherSubscription = this.authService.spinnerUpdate.subscribe((data) => {
       this.spinner = data
     })
+
+    if (this.authService.connecte()){
+      this.router.navigate(['/']);
+    }
   }
 
   connexionForm = new FormGroup({
     adresseCourriel: new FormControl('', [Validators.required, Validators.email, Validators.minLength(4), Validators.maxLength(30)]),
-    motDePasse: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(30)])
+    motDePasse: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(30)])
   });
 
   onSubmit() {
