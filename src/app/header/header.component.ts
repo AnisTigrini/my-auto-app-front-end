@@ -7,9 +7,10 @@ import { authService } from '../authService';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   connection:boolean = false;
+  mySubscription:Subscription;
   prenom;
   imageProfil;
 
@@ -17,7 +18,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.connection = this.authService.connecte()
-    this.imageProfil = localStorage.getItem('imageProfil')
-    this.prenom = localStorage.getItem('prenom')
+    this.imageProfil = this.authService.imageProfil
+    this.prenom = this.authService.prenom
+    this.mySubscription = this.authService.authSubject.subscribe((data) => {
+      this.imageProfil = this.authService.imageProfil
+      this.prenom = this.authService.prenom
+    })
+  }
+
+  ngOnDestroy() {
+    this.mySubscription.unsubscribe()
   }
 }

@@ -46,7 +46,8 @@ i {
 }
 
 button {
-    width: 85%;
+    width: 75%;
+    min-width: fit-content;
     font-size: 14px;
     margin-top: 1rem;
     justify-self: center;
@@ -102,4 +103,60 @@ img {
     background-color: white;
     text-align: center;
     box-shadow: 0 2px 4px rgb(45 47 59 / 12%);
+    cursor: pointer;
+}
+
+.marque-disponibles {
+    background-color: #84aed6;
+}
+
+.modele-disponibles {
+    background-color: #5e81a1;
+}
+
+.choix {
+    position:absolute;
+    border: 2px solid #1477d4;
+    background-color: #d9e9f7da;
+    border-radius: 3px;
+    box-shadow: 30px 30px 150px #1477d4;
+    padding: .5rem;
+    width: 60%;
+    height: 300px;
+    right: 20%;
+    overflow-y: scroll;
+}
+
+.choix-marques-entete {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#fermer {
+    justify-self: end;
+    background-color: #FF0000;
+    padding: 2px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.liste-choix-marques {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.checkbox {
+    background-color: white;
+    width: 30px;
+    height: 15px;
+    border-radius: 100px;
+    border: 1px solid #1477d4;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
 }

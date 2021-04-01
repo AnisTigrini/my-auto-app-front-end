@@ -20,12 +20,12 @@
             <input name="prenom" [placeholder]="prenom" type="text" formControlName="prenom">
 
             <label>Image de profil</label>
-            <input name="imageProfil" type="url" [(ngModel)]="imageProfil"
+            <input name="imageProfil" type="url" [(ngModel)]="imageDuplique"
             [placeholder]="imageProfil" formControlName="imageProfil">
 
             <button type="submit" [disabled]="!infoForm.valid">Mis-à-jour</button>
 
-            <img class="image-profil" [src]="imageProfil"/>
+            <img class="image-profil" [src]="imageDuplique"/>
         </div>
     </form>
 </div>

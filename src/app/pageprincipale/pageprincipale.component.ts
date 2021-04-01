@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,15 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageprincipaleComponent implements OnInit {
 
-  autoBrandList:string[] = ["Acura", "Alpha Romeo", "AMC", "Aston Martin", "Audi"
-, "Bentley", "BMW", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ferrari"
-, "Fiat", "Ford", "Genesis", "GMC", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "Kia",
-"Lamborghini", "Land Rover", "Lexus", "Lincoln", "Maserati", "Mazda", "Mclaren", "Mercedes-Benz",
-"Mitsubishi", "Nissan", "Pontiac", "Porsche", "Rolls-Royce", "Subaru", "Suzuki", "Tesla", "Toyota",
-"Volkswagen", "Volvo"];
-  constructor() { }
 
-  ngOnInit(): void {
+  autoBrandList:string[] = [];
+  autoModelList:string[] = [];
+
+  fenetreMarques = false
+  fenetreModeles = false
+
+  constructor(private http:HttpClient) { 
+
   }
 
+  ngOnInit(): void {
+    this.http.get('http://localhost:5000/api/marqueauto').subscribe((response) => {
+      this.autoBrandList = response['response'].map(a => a.Marque)
+    })
+  }
+
+  afMarques() {
+    this.fenetreMarques = !this.fenetreMarques
+  }
+
+  
+  afModeles() {
+    this.fenetreModeles = !this.fenetreModeles
+  }
 }

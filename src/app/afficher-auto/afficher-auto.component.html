@@ -1,0 +1,70 @@
+<app-header></app-header>
+<div class='afficher-auto'>
+
+    <form class="auto-form">
+        <h1>Renseignements de base sur le véhicule</h1>
+
+        <label>Titre du post</label>
+        <input name="title" type="text">
+
+        <label>Prix du véhicle</label>
+        <input name="prix" type="number">
+        
+        <label>Kilométrage du véhicle</label>
+        <input name="km" type="number">
+
+        <label>Marque du véhicle</label>
+        <select name='marque'>
+            <option disabled selected value> -- Choisir une option -- </option>
+            <option>À travailler</option>
+        </select>
+        
+        <label>Modèle du véhicle</label>
+        <select name='modele'>
+            <option disabled selected value> -- Choisir une option -- </option>
+            <option>À travailler</option>
+        </select>
+
+        <label>Version du véhicule</label>
+        <input name="version" type="number">
+
+        <label>Année du véhicle</label>
+        <select name='annee'>
+            <option disabled selected value> -- Choisir une option -- </option>
+            <option *ngFor="let number of annees" [value]="number">{{ number }}</option>
+        </select>
+
+        <label>État du véhicle</label>
+        <select name="etat">
+            <option disabled selected value> -- Choisir une option -- </option>
+            <option value="usage">Usagé</option>
+            <option value="nouveau">Nouveau</option>
+        </select>
+        
+        <label>Type de carrosserie</label>
+        <select name="carrosserie">
+            <option disabled selected value> -- Choisir une option -- </option>
+            <option *ngFor='let carosse of carrosserie' [value]="carosse">{{ carosse }}</option>
+        </select>
+
+        <label>Type de carburant</label>
+        <select name="carburant">
+            <option disabled selected value> -- Choisir une option -- </option>
+            <option value="Essence">Essence</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Électrique">Électrique</option>
+            <option value="Hybride">Hybride</option>
+            <option value="Autres">Autres</option>
+        </select>
+
+        <label>Type de transmission</label>
+        <select name="carburant">
+            <option disabled selected value> -- Choisir une option -- </option>
+            <option value="Automatique">Automatique</option>
+            <option value="Manuelle">Manuelle</option>
+        </select>
+        
+        <label>Description du véhicle</label>
+        <textarea name="Description" rows="8"></textarea>
+    </form>
+</div>

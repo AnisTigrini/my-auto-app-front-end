@@ -15,6 +15,7 @@ import { ConnexionGuard } from './connexion.guard';
 import { ProfilComponent } from './profil/profil.component';
 import { InformtionsComponent } from './profil/informtions/informtions.component';
 import { FavorisComponent } from './profil/favoris/favoris.component';
+import { AfficherAutoComponent } from './afficher-auto/afficher-auto.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FavorisComponent } from './profil/favoris/favoris.component';
     SpinnerComponent,
     ProfilComponent,
     InformtionsComponent,
-    FavorisComponent
+    FavorisComponent,
+    AfficherAutoComponent
   ],
   imports: [
     BrowserModule,

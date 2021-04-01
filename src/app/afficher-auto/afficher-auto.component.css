@@ -1,0 +1,48 @@
+.afficher-auto {
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 12% 76% 12%;
+    justify-items: center;
+}
+
+h1 {
+    color: #1477d4;
+}
+
+label {
+    font-size: 13px;
+    color: #2d2f3b;
+    font-weight: 700;
+}
+
+form {
+    margin: 5px;
+    padding: .5rem;
+    width: 94%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3px;
+    grid-column: 2;
+}
+
+input,  select {
+    height: 3rem;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    transition: all .3s;
+    margin-bottom: .7rem;
+}
+
+textarea {
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    transition: all .3s;
+    margin-bottom: .7rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 4px #1477d4;
+    border: none;
+}

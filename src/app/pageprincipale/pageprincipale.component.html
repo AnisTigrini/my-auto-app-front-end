@@ -4,9 +4,12 @@
     <div class='search-bar'>
         <div>
             <i class="fas fa-map-marker-alt fa-2x"></i>
-            <span class='search-text'>Tout au Canada</span>
+            <span class='search-text'>Les meilleurs véhicules au Canada</span>
         </div>
-        <input type="text">
+        <button class='marque-disponibles' (click)='afMarques()'
+        type="button">Choisir les marques</button>
+        <button class='modele-disponibles' (click)='afModeles()'
+        type="button">Choisir les modèles</button>
         <div class='prix-km'>
             <div>
                 <i class="fas fa-search-dollar fa-2x"></i>
@@ -103,5 +106,28 @@
     <h1>Toutes les marques</h1>
     <div class='marques-auto'>
         <span class="autoBrand" *ngFor='let auto of autoBrandList'>{{ auto }}</span>
+    </div>
+
+    <div class="choix" *ngIf='fenetreMarques'>
+        <div class='choix-marques-entete'>
+            <h2>Marques</h2>
+            <h2 id='fermer' (click)='fenetreMarques = false'>X</h2>
+        </div>
+        <form>
+            <div class="liste-choix-marques">
+                <div *ngFor='let auto of autoBrandList'>
+                    <input class="checkbox" type="checkbox" name="{{auto}}" value="{{auto}}">
+                    <label>{{ auto }}</label>
+                </div>
+            </div>
+            <button type="button">Appliquer</button>
+        </form>
+    </div>
+
+    <div class="choix" *ngIf='fenetreModeles'>
+        <div class='choix-marques-entete'>
+            <h2>Modèles</h2>
+            <h2 id='fermer' (click)='fenetreModeles = false'>X</h2>
+        </div>
     </div>
 </div>

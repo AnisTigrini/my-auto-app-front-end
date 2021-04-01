@@ -14,9 +14,10 @@ export class InformtionsComponent implements OnInit, OnDestroy {
   mySubscription:Subscription;
   myOtherSubscription:Subscription;
   reponseMessage ="";
-  nom = localStorage.getItem('nom');
-  prenom = localStorage.getItem('prenom');
-  imageProfil = localStorage.getItem('imageProfil');
+  nom;
+  prenom;
+  imageProfil;
+  imageDuplique;
   
   constructor(private authService:authService) { }
 
@@ -27,6 +28,11 @@ export class InformtionsComponent implements OnInit, OnDestroy {
     this.myOtherSubscription = this.authService.spinnerUpdate.subscribe((data) => {
       this.spinner = data
     })
+
+    this.nom = this.authService.nom
+    this.prenom = this.authService.prenom
+    this.imageProfil = this.authService.imageProfil
+    this.imageDuplique = this.imageProfil
   }
 
   infoForm = new FormGroup({
@@ -36,7 +42,7 @@ export class InformtionsComponent implements OnInit, OnDestroy {
   });
 
   onSubmit() {
-    if (localStorage.getItem('nom') != this.infoForm.value.nom || localStorage.getItem('prenom')!= this.infoForm.value.prenom || localStorage.getItem('imageProfil') != this.infoForm.value.imageProfil) {
+    if (this.nom != this.infoForm.value.nom || this.prenom!= this.infoForm.value.prenom || this.imageProfil != this.infoForm.value.imageProfil) {
       this.spinner = true;
       this.reponseMessage = ""
       this.authService.maj_profil(

@@ -11,9 +11,28 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 50vh;
     background-color: rgb(247, 247, 249);
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1477d4; 
+    border-radius: 10px;
+  }
+  
+
 
 @media only screen and (max-width: 750px) {
     .connexion {
@@ -34,5 +53,11 @@ body {
     
     .info-main {
         padding: 1rem !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .liste-choix-marques {
+        grid-template-columns: 1fr 1fr !important;
     }
 }
