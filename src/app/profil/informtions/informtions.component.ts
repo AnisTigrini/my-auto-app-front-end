@@ -38,7 +38,7 @@ export class InformtionsComponent implements OnInit, OnDestroy {
   infoForm = new FormGroup({
     nom: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(60)]),
     prenom: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(60)]),
-    imageProfil: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(400), Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]),
+    imageProfil: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(800), Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]),
   });
 
   onSubmit() {

@@ -3,8 +3,13 @@
     <div class="menu">
         <div (click)="onClick('informations')" [ngClass]="select=='informations' ? 'selected' : ''"
         class='menu-item menu-plus'>Informations</div>
+        
         <div (click)="onClick('favoris')" [ngClass]="select=='favoris' ? 'selected' : ''"
         class='menu-item menu-plus'>Favoris</div>
+        
+        <div (click)="onClick('mesposts')" [ngClass]="select=='mesposts' ? 'selected' : ''"
+        class='menu-item menu-plus'>Mes Posts</div>
+        
         <div (click)="onClick('deconnexion')" 
         class='menu-item deconnexion'>Déconnexion</div>
     </div>

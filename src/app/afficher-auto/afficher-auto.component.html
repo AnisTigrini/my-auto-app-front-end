@@ -1,54 +1,53 @@
 <app-header></app-header>
 <div class='afficher-auto'>
 
-    <form class="auto-form">
+    <form class="auto-form" [formGroup]="autForm" (ngSubmit)="onSubmit()">
         <h1>Renseignements de base sur le véhicule</h1>
 
         <label>Titre du post</label>
-        <input name="title" type="text">
+        <input name="title" type="text" formControlName="titrePost">
 
         <label>Prix du véhicle</label>
-        <input name="prix" type="number">
+        <input name="prix" type="number" formControlName="prixPost">
         
         <label>Kilométrage du véhicle</label>
-        <input name="km" type="number">
+        <input name="km" type="number" formControlName="kilometragePost">
 
-        <label>Marque du véhicle</label>
-        <select name='marque'>
+        <label>Marque et modèle du véhicle</label>
+        <select name='marque' formControlName="marquePost">
             <option disabled selected value> -- Choisir une option -- </option>
-            <option>À travailler</option>
-        </select>
-        
-        <label>Modèle du véhicle</label>
-        <select name='modele'>
-            <option disabled selected value> -- Choisir une option -- </option>
-            <option>À travailler</option>
+            <option *ngFor="let auto of autoBrandList" value="{{ auto }}">
+                <b>{{ auto.Marque }}:</b> {{ auto.Modele }}
+            </option>
         </select>
 
         <label>Version du véhicule</label>
-        <input name="version" type="number">
+        <input name="version" type="number" formControlName="versionPost">
+
+        <label>Motricité du véhicule</label>
+        <input name="version" type="text" formControlName="motricitePost">
 
         <label>Année du véhicle</label>
-        <select name='annee'>
+        <select name='annee' formControlName="annePost">
             <option disabled selected value> -- Choisir une option -- </option>
             <option *ngFor="let number of annees" [value]="number">{{ number }}</option>
         </select>
 
         <label>État du véhicle</label>
-        <select name="etat">
+        <select name="etat" formControlName="etat">
             <option disabled selected value> -- Choisir une option -- </option>
             <option value="usage">Usagé</option>
             <option value="nouveau">Nouveau</option>
         </select>
         
         <label>Type de carrosserie</label>
-        <select name="carrosserie">
+        <select name="carrosserie" formControlName="carrosseriePost">
             <option disabled selected value> -- Choisir une option -- </option>
             <option *ngFor='let carosse of carrosserie' [value]="carosse">{{ carosse }}</option>
         </select>
 
         <label>Type de carburant</label>
-        <select name="carburant">
+        <select name="carburant" formControlName="carburantPost">
             <option disabled selected value> -- Choisir une option -- </option>
             <option value="Essence">Essence</option>
             <option value="Diesel">Diesel</option>
@@ -58,13 +57,15 @@
         </select>
 
         <label>Type de transmission</label>
-        <select name="carburant">
+        <select name="carburant" formControlName="transmissionPost">
             <option disabled selected value> -- Choisir une option -- </option>
             <option value="Automatique">Automatique</option>
             <option value="Manuelle">Manuelle</option>
         </select>
         
         <label>Description du véhicle</label>
-        <textarea name="Description" rows="8"></textarea>
+        <textarea name="Description" rows="8" formControlName="descriptionPost"></textarea>
+
+        <button type="submit" [disabled]="!autForm.valid">Suivant</button>
     </form>
 </div>

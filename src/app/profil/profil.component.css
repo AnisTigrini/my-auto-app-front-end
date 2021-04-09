@@ -7,12 +7,12 @@
 
 .menu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 1px;
 }
 
 .menu-item {
-    font-size: 14px;
+    font-size: 12px;
     border: 1px solid #1477d4;
     color: #1477d4;
     width: 100%;

@@ -46,3 +46,29 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 0 4px #1477d4;
     border: none;
 }
+
+button {
+    width: 300px;
+    font-size: 14px;
+    margin-top: 1rem;
+    justify-self: center;
+    padding: 2rem;
+    color: white;
+    font-weight: 700;
+    background-color: #1477d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d5c97;
+}
+
+button:disabled {
+    background-color: #666974;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
