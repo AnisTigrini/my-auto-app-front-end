@@ -1,7 +1,7 @@
 .afficher-auto {
-    padding: .5rem;
+    padding: .1rem;
     display: grid;
-    grid-template-columns: 12% 76% 12%;
+    grid-template-columns: 2% 70% 28%;
     justify-items: center;
 }
 
@@ -16,9 +16,8 @@ label {
 }
 
 form {
-    margin: 5px;
-    padding: .5rem;
-    width: 94%;
+    margin: 1px;
+    width: 75%;
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 3px;
@@ -71,4 +70,31 @@ button:disabled {
 
 input.ng-invalid.ng-touched, select.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
     border: 2px solid red;
+}
+
+.equipement-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3px;
+}
+
+.image-preview {
+    position:absolute;
+    text-align: center;
+    top:70%;
+    border: 2px solid #1477d4;
+    background-color: #d9e9f7da;
+    border-radius: 5px;
+    box-shadow: 30px 30px 150px #1477d4;
+    padding: 5px;
+    width: 80%;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+img {
+    max-width: 230px;
+    max-height: 200px;
+    border-radius: 15px;
+    border: 1px solid #1477d4;
 }

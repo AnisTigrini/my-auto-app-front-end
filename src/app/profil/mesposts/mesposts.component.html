@@ -1,1 +1,10 @@
-<p>mesposts works!</p>
+<div class='mes-autos'>
+    <div class='auto-poster' *ngFor='let auto of autoList'>
+        <h2>{{ auto.titreAuto }}</h2>
+        <h3>{{ auto.descriptionAuto }}</h3>
+        <p>{{ auto.marqueAuto }}</p>
+        <p>{{ auto.modeleAuto }}</p>
+        <p #refel>{{ auto.idpost }}</p>
+        <button type="button" (click)='handler(refel)'>Supprimer</button>
+    </div>
+</div>

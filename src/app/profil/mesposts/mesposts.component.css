@@ -1,0 +1,23 @@
+.mes-autos {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 4px;
+}
+
+.auto-poster {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 2px;
+}
+
+button {
+    border-radius: 3px;
+    background-color: rgb(201, 41, 41);
+    color: white;
+    font-weight: 600;
+    border: none;
+}

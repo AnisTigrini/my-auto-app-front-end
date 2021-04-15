@@ -16,13 +16,13 @@
         <label>Marque et modèle du véhicle</label>
         <select name='marque' formControlName="marquePost">
             <option disabled selected value> -- Choisir une option -- </option>
-            <option *ngFor="let auto of autoBrandList" value="{{ auto }}">
+            <option *ngFor="let auto of autoBrandList" value="{{ auto.Marque  }}+{{ auto.Modele }}">
                 <b>{{ auto.Marque }}:</b> {{ auto.Modele }}
             </option>
         </select>
 
         <label>Version du véhicule</label>
-        <input name="version" type="number" formControlName="versionPost">
+        <input name="version" type="text" formControlName="versionPost">
 
         <label>Motricité du véhicule</label>
         <input name="version" type="text" formControlName="motricitePost">
@@ -66,6 +66,28 @@
         <label>Description du véhicle</label>
         <textarea name="Description" rows="8" formControlName="descriptionPost"></textarea>
 
-        <button type="submit" [disabled]="!autForm.valid">Suivant</button>
+        <label>Images du véhicule</label>
+        <input name="image_un" type="url" formControlName="image_un">
+        <input name="image_deux" type="url" formControlName="image_deux">
+        <input name="image_trois" type="url" formControlName="image_trois">
+
+        <label>Équipement (facultatif)</label>
+        <div class="equipement-input">
+            <input name="equipement_un" type="text" formControlName="equipement_un">
+            <input name="equipement_deux" type="text" formControlName="equipement_deux">
+            <input name="equipement_trois" type="text" formControlName="equipement_trois">
+            <input name="equipement_quatre" type="text" formControlName="equipement_quatre">
+        </div>
+
+        <button type="button" (click)="showImages()">Images</button>
+        <button type="submit" [disabled]="!autForm.valid">Soumettre</button>
+
+        <div class='image-preview' *ngIf="show_images">
+            <h2>Vos images</h2>
+            <img [src]="img_un" alt="">
+            <img [src]="img_deux" alt="">
+            <img [src]="img_trois" alt="">
+            <button type="button" (click)='show_images = !show_images'>Fermer</button>
+        </div>
     </form>
 </div>

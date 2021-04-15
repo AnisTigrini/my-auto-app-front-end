@@ -1,0 +1,19 @@
+.favoris {
+    padding: .4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.auto-favoris {
+    padding: 2px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+    border: 1px solid rgb(123, 189, 250);
+    display: grid;
+    grid-template-columns: 130px 180px;
+}
+
+.fa-dumpster {
+    color: rgb(247, 97, 97);
+}
