@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="auto-unique">
+    <img [src]='imageSelectionne' (click)='changerImage()'>
+    <h1>{{ auto.titreAuto }}</h1>
+    <h1 class="prix">{{ auto.priceAuto }} $</h1>
+    <div *ngIf='connecte'>
+        <i class="fas fa-heart fa-2x" (click)='bclick($event)' [ngStyle]="{'color':color}"></i>
+    </div>
+    <div class="details">
+
+        <i class="fas fa-info-circle"></i>
+        <div><b>Etat :</b> {{ auto.etatAuto }}</div>
+
+        <i class="fas fa-info-circle"></i>
+        <div><b>Kilomètres :</b> {{ auto.kilometrageAuto }} KM</div>
+
+        <i class="fas fa-info-circle"></i>
+        <div><b>Transmission :</b> {{ auto.typeTransmission }}</div>
+
+        <i class="fas fa-info-circle"></i>
+        <div><b>Type de carburant :</b> {{ auto.typeCarburant }}</div>
+
+        <i class="fas fa-info-circle"></i>
+        <div><b>Marque :</b> {{ auto.marqueAuto }}</div>
+
+        <i class="fas fa-info-circle"></i>
+        <div><b>Modele :</b> {{ auto.modeleAuto }}</div>
+
+        <i class="fas fa-info-circle"></i>
+        <div><b>Carrosserie :</b> {{ auto.typeCarrosserie }}</div>
+    </div>
+
+
+    <h1>Description</h1>
+    <div class="description">{{auto.descriptionAuto}}</div>
+
+    <h1>Equipements</h1>
+    <div class="description">
+        <h3 *ngFor='let e of equipement'>{{ e.nomEquipment }}</h3>
+    </div>
+
+    <div>notice légale</div>
+    <div>Le contenu de ce site ne nous appartiens pas</div>
+    <div>Le contenu de ce site ne nous appartiens pas</div>
+    <div>Le contenu de ce site ne nous appartiens pas</div>
+
+
+    <div class='bar'>
+        <button type="button" (click)='email()'>{{contacter}}</button>
+    </div>
+</div>

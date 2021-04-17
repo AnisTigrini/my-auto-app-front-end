@@ -1,0 +1,26 @@
+.auto-container {
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.auto-info {
+    margin: 2px;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    border: 1px solid rgb(75, 75, 75);
+    box-shadow: 1px 0px 5px black;
+    background-color: white;
+}
+
+img {
+    width: 130px;
+    height: 100px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr;
+}

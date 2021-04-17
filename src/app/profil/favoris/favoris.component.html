@@ -1,15 +1,10 @@
-<div class='favoris'>
-    <div class="auto-favoris" id='idpost'>
-        <div>
-            <p>image auto</p>
-        </div>
-        <div>
-            <h3>mon auto</h3>
-            <div>
-                <h5>Marque</h5>
-                <h5>Modele</h5>
-            </div>
-        </div>
-        <i class="fas fa-dumpster fa-2x"></i>
+<div class='mes-autos'>
+    <div class='auto-poster' *ngFor='let auto of autoList'>
+        <h2>{{ auto.titreAuto }}</h2>
+        <h3>{{ auto.descriptionAuto }}</h3>
+        <p>{{ auto.marqueAuto }}</p>
+        <p>{{ auto.modeleAuto }}</p>
+        <p #refel>{{ auto.idpost }}</p>
+        <button type="button" (click)='handler(refel)'>Supprimer</button>
     </div>
 </div>

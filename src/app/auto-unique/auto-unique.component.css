@@ -1,0 +1,79 @@
+.auto-unique {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 2px;
+}
+img {
+    width: 100%;
+    max-height: 350px;
+}
+
+.prix {
+    color: rgb(24, 184, 24);
+}
+
+.description {
+    margin: 4px;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 4px rgb(63, 63, 63);
+    text-align: center;
+    background-color: white;
+    width: 95%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 2rem;
+    margin: 4px;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 4px rgb(63, 63, 63);
+    background-color: white;
+    width: 95%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.fa-info-circle {
+    justify-self: end;
+    margin-right: 8px;
+    color: #1477d4;
+}
+
+.bar {
+    height: 35px;
+    background-color: white;
+    position: fixed;
+    border-top: 1px solid rgb(184, 184, 184);
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 6px;
+    box-shadow: 5px -2px 10px 5px #666666;
+
+}
+
+button {
+    width: 200px;
+    font-size: 14px;
+    justify-self: center;
+    padding: .5rem;
+    color: white;
+    font-weight: 700;
+    background-color: #1477d4;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d5c97;
+}
+
+.fas {
+    color: #1477d4;
+}

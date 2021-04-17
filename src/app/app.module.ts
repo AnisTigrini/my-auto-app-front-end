@@ -17,6 +17,8 @@ import { InformtionsComponent } from './profil/informtions/informtions.component
 import { FavorisComponent } from './profil/favoris/favoris.component';
 import { AfficherAutoComponent } from './afficher-auto/afficher-auto.component';
 import { MespostsComponent } from './profil/mesposts/mesposts.component';
+import { ResultatsAutoComponent } from './resultats-auto/resultats-auto.component';
+import { AutoUniqueComponent } from './auto-unique/auto-unique.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { MespostsComponent } from './profil/mesposts/mesposts.component';
     InformtionsComponent,
     FavorisComponent,
     AfficherAutoComponent,
-    MespostsComponent
+    MespostsComponent,
+    ResultatsAutoComponent,
+    AutoUniqueComponent
   ],
   imports: [
     BrowserModule,

@@ -25,43 +25,43 @@
 
     <h1>Marques Populaires</h1>
     <div class="marques-et-autos">
-        <div class='marques'>
+        <div class='marques' (click)='recherche("Ford")'>
             <img src='../../assets/Ford.jpg'>
             <h1>Ford</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("Toyota")'>
             <img src='../../assets/Toyota.jpg'>
             <h1>Toyota</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("Honda")'>
             <img src='../../assets/Honda.jpg'>
             <h1>Honda</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("Chevrolet")'>
             <img src='../../assets/Chevrolet.jpg'>
             <h1>Chevrolet</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("Nissan")'>
             <img src='../../assets/Nissan.jpg'>
             <h1>Nissan</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("BMW")'>
             <img src='../../assets/BMW.jpg'>
             <h1>BMW</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("Dodge")'>
             <img src='../../assets/Dodge.jpg'>
             <h1>Dodge</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("GMC")'>
             <img src='../../assets/GMC.jpg'>
             <h1>GMC</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("Volkswagen")'>
             <img src='../../assets/Volkswagen.jpg'>
             <h1>Volkswagen</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche("Jeep")'>
             <img src='../../assets/Jeep.jpg'>
             <h1>Jeep</h1>
         </div>
@@ -69,35 +69,35 @@
 
     <h1>Type de carroserie</h1>
     <div class="marques-et-autos">
-        <div class='marques'>
+        <div class='marques' (click)='recherche_deux("Camionnette")'>
             <img src='../../assets/Camionnette.jpg'>
             <h1>Camionnette</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche_deux("VUS")'>
             <img src='../../assets/VUS.jpg'>
             <h1>VUS</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche_deux("Berline")'>
             <img src='../../assets/Berline.jpg'>
             <h1>Berline</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche_deux("Fourgonnettes")'>
             <img src='../../assets/Fourgonnettes.jpg'>
             <h1>Fourgonnettes</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche_deux("Coupé")'>
             <img src='../../assets/Coupe.jpg'>
             <h1>Coupé</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche_deux("Cabriolet")'>
             <img src='../../assets/Cabriolet.jpg'>
             <h1>Cabriolet</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche_deux("À Hayon")'>
             <img src='../../assets/Hayon.jpg'>
             <h1>À Hayon</h1>
         </div>
-        <div class='marques'>
+        <div class='marques' (click)='recherche_deux("Familliale")'>
             <img src='../../assets/Familliale.jpg'>
             <h1>Familliale</h1>
         </div>
@@ -105,7 +105,7 @@
     
     <h1>Toutes les marques</h1>
     <div class='marques-auto'>
-        <span class="autoBrand" *ngFor='let auto of autoShortList'>{{ auto }}</span>
+        <span class="autoBrand" *ngFor='let auto of autoShortList' (click)="recherche(auto)">{{ auto }}</span>
     </div>
 
     <div class="choix" *ngIf='fenetreMarques'>

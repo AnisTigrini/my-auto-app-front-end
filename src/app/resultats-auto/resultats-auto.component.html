@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="auto-container">
+    <div class='auto-info' *ngFor='let auto of maliste' (click)='selected(auto.idpost)'>
+        <img [src]="auto.urlimage">
+
+        <div class="info" [id]="auto.idpost">
+            <h2>{{ auto.titreAuto }}</h2>
+            <h3>{{ auto.priceAuto }} $</h3>
+
+            <div>
+                <h4><i class="fas fa-tachometer-alt"></i>{{ auto.kilometrageAuto }}</h4>
+            </div>
+            <div>
+                <h4><i class="fas fa-car"></i>{{ auto.marqueAuto }}</h4>
+            </div>
+        </div>
+    </div>
+</div>

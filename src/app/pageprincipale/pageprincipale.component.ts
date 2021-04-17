@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { autoService } from '../autoservice';
 
@@ -17,7 +18,7 @@ export class PageprincipaleComponent implements OnInit, OnDestroy {
   fenetreMarques = false
   fenetreModeles = false
 
-  constructor(private autoService:autoService) { 
+  constructor(private autoService:autoService, private router:Router) { 
 
   }
 
@@ -51,5 +52,15 @@ export class PageprincipaleComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.mySubscription.unsubscribe()
+  }
+
+  recherche(placeholder) {
+    this.autoService.getBrandsAutos(placeholder)
+    this.router.navigate(["/resultats"])
+  }
+
+  recherche_deux(placeholder) {
+    this.autoService.getCarosserieAutos(placeholder)
+    this.router.navigate(["/resultats"])
   }
 }
